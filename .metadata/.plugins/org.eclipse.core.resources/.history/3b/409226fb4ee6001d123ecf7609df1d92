@@ -1,0 +1,6 @@
+package com.codewitheshan.getprice.payloads;
+
+public class ApiResponse {
+	private String message;
+	private boolean success;
+}

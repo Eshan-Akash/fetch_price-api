@@ -1,0 +1,6 @@
+package com.codewitheshan.getprice.exceptions;
+
+public class ResourceNotFoundException extends RuntimeException {
+	private String price;
+	private String message;
+}

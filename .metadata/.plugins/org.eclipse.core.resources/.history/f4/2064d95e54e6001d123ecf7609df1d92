@@ -1,0 +1,12 @@
+package com.codewitheshan.getprice.exceptions;
+
+public class ApiException extends RuntimeException{
+	private String price;
+	private String message;
+
+	public ApiException(String price, String message) {
+		super(String.format("price is %s beacuse %s", price, message));
+		this.price = price;
+		this.message = message;
+	}
+}

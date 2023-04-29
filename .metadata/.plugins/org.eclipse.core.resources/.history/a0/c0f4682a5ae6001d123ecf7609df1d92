@@ -1,0 +1,6 @@
+package com.codewitheshan.getprice.exceptions;
+
+public class InputValidationException extends RuntimeException {
+	private String price;
+	private String message;
+}

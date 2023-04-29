@@ -1,0 +1,5 @@
+package com.codewitheshan.getprice.services;
+
+public interface PriceScraperService {
+	public String scrape();
+}

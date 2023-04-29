@@ -1,0 +1,26 @@
+package com.codewitheshan.getprice.services.impl;
+
+import java.io.IOException;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.springframework.stereotype.Service;
+
+import com.codewitheshan.getprice.services.PriceScraperService;
+
+@Service
+public class PriceScraperServiceImpl implements PriceScraperService{
+	private static final String URL = "https://www.metal.com/Lithium-ion-Battery/202303240001";
+
+	@Override
+	public String scrape() throws IOException {
+		Document doc = Jsoup.connect(URL).get();
+	    Element priceElement = doc.selectFirst(".strong___1JlBD .priceDown___2TbRQ");
+	    return priceElement.text();
+	}
+	
+}
+
+
+

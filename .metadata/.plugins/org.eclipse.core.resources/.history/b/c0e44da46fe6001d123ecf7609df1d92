@@ -1,0 +1,5 @@
+package com.codewitheshan.getprice.config;
+
+public class SwaggerConfig {
+
+}

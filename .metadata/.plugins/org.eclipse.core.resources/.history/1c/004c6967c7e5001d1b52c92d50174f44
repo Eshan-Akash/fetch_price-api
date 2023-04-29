@@ -1,0 +1,11 @@
+package com.codewitheshan.getprice.services.impl;
+
+public class PriceScraperServiceImpl implements PriceScraperService{
+	private static final String URL = "https://www.metal.com/Lithium-ion-Battery/202303240001";
+
+    public String scrape() throws IOException {
+        Document doc = Jsoup.connect(URL).get();
+        Element priceElement = doc.selectFirst(".prices-quote-detail .price");
+        return priceElement.text();
+    }
+}
